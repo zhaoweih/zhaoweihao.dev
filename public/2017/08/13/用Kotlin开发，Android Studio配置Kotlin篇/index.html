@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>用Kotlin开发，Android Studio配置Kotlin篇 · Zhao Weihao 's Blog</title><meta name="description" content="追求自由的少年"><meta name="og:title" content="用Kotlin开发，Android Studio配置Kotlin篇"><meta name="og:type" content="website"><meta name="og:url" content="https://zhaoweihao.com/2017/08/13/用Kotlin开发，Android Studio配置Kotlin篇/"><meta name="og:image"><meta name="og:description" content="追求自由的少年"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.jpg"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><link rel="search" type="application/opensearchdescription+xml" href="https://zhaoweihao.com/atom.xml" title="Zhao Weihao 's Blog"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Zhao Weihao 's Blog" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">用Kotlin开发，Android Studio配置Kotlin篇</h1><div class="post-info"><div class="post-info-profile"><a href="/about/" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"><a href="/categories/Kotlin" target="_self"><span>KOTLIN</span></a></div><div class="post-date">Aug 13, 2017</div></div></div><div class="post-share"><div class="fb-like" data-href="https://zhaoweihao.com/2017/08/13/用Kotlin开发，Android Studio配置Kotlin篇/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="https://zhaoweihao.com/2017/08/13/用Kotlin开发，Android Studio配置Kotlin篇/" data-layout="button" data-size="small" data-mobile-iframe="true"></div></div><div class="post-content"><ul>
+<li><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如今J神加入了GOOGLE，并且专注在Kotlin领域，而且今年的I/O大会宣布Kotlin作为官方开发语言，所以以后的趋势可能要用Kotlin进行Android开发，对于初学者来说，现在学习使用Kotlin进行开发很有必要。即使现在Android还不是Kotlin天下，可是在以后谁都说不定对吧。</p>
+<h1 id="Android-Studio配置Kotlin"><a href="#Android-Studio配置Kotlin" class="headerlink" title="Android Studio配置Kotlin"></a>Android Studio配置Kotlin</h1></li>
+</ul>
+<h2 id="第一步：安装Kotlin插件"><a href="#第一步：安装Kotlin插件" class="headerlink" title="第一步：安装Kotlin插件"></a>第一步：安装Kotlin插件</h2><p><em>(Android Studio:以下简称AS)</em><br>由于Kotlin插件只在<a href="https://developer.android.com/studio/preview/index.html" target="_blank" rel="noopener">AS3.0</a>自带。所以之前的版本都必须安装Kotlin插件，在AS中依次点击<strong>File→Settings→Plugins→Install JetBrains plugin</strong>，然后在搜索框填入Kotlin，找到Kotlin点击Install即可(由于我已经安装了，所以我这里没有Install按钮)<br><img src="http://upload-images.jianshu.io/upload_images/5796527-ddaeb6cc097bdc24.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TIM截图20170813102806.png"></p>
+<h2 id="第二步：创建项目"><a href="#第二步：创建项目" class="headerlink" title="第二步：创建项目"></a>第二步：创建项目</h2><p>创建项目的步骤和之前一样，点击(如果在欢迎界面)Start a new Android Studio project 或者 File →New project，配置和之前一样就好</p>
+<h3 id="转换代码"><a href="#转换代码" class="headerlink" title="转换代码"></a>转换代码</h3><p>建立好项目后打开<code>MainActivity.java</code>可以按快捷键<strong>Ctrl+Shift+A</strong>或者点击<strong>Help→Find Action</strong>，输入 <strong>Convert Java File to Kotlin File</strong>，又或者点击<strong>Code→ Convert Java File to Kotlin File</strong>都可以将当前java文件转换成kotlin文件</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5796527-e0ef520b6bf2ec3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TIM截图20170813104236.png"></p>
+<p>转换成功后就会发现.java后缀变成了.kt后缀，MainActivity也变成Kotlin语法</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5796527-49f3bb348d211230.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TIM截图20170813104359.png"></p>
+<h3 id="在项目中配置Kotlin"><a href="#在项目中配置Kotlin" class="headerlink" title="在项目中配置Kotlin"></a>在项目中配置Kotlin</h3><p>在MainActivity里面随便输入一点东西，AS会在上方会出现一个Configure按钮，点击即可配置Kotlin，或者点击 <strong>Tools→Kotlin→Configure Kotlin in Project</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5796527-535dee76413d9e69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TIM截图20170813105024.png"></p>
+<p>在弹出的窗口选择OK即可</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5796527-0f40b86db4bdef37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TIM截图20170813105251.png"></p>
+<p>最后会提示你更新项目，点击Sync Now即可</p>
+<h1 id="Kotlin在AS中的扩展"><a href="#Kotlin在AS中的扩展" class="headerlink" title="Kotlin在AS中的扩展"></a>Kotlin在AS中的扩展</h1><h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><p>在<code>build.gradle</code>文件里添加依赖</p>
+<pre><code>apply plugin: &apos;kotlin-android-extensions&apos;</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/5796527-d77473662b893c22.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="TIM截图20170813110211.png"></p>
+<h2 id="使用扩展"><a href="#使用扩展" class="headerlink" title="使用扩展"></a>使用扩展</h2><p>先在<code>activity_main.xml</code>中添加一个TextView</p>
+<pre><code>&lt;TextView
+    android:id=&quot;@+id/hello&quot;
+    android:layout_width=&quot;fill_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:text=&quot;Hello World!&quot;
+   /&gt;</code></pre><p>然后回到<code>MainAcitivity.kt</code></p>
+<pre><code>import kotlinx.android.synthetic.main.activity_main.*//记得添加这个import
+
+class MainActivity : AppCompatActivity() {
+
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+    hello.setText(&quot;Hello Kotlin!&quot;)//直接用id就可以控制，不用findviewById
+}
+}</code></pre><p>运行在手机</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/5796527-245d6eacbf61bb15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Screenshot_20170813-110806.png"></p>
+<p>使用Kotlin扩展将以前java代码简化好多，提高开发效率</p>
+<p>更多关于kotlin扩展的解析可以查看<a href="http://kotlinlang.org/docs/tutorials/android-plugin.html" target="_blank" rel="noopener">官方文档</a></p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>拓展阅读：<a href="http://kotlinlang.org/docs/tutorials/android-frameworks.html" target="_blank" rel="noopener">Android Frameworks Using Annotation Processing</a></p>
+<h1 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h1><p><a href="https://github.com/zhaoweihaoChina" target="_blank" rel="noopener">Github</a><br><a href="http://zhaoweihao.me/" target="_blank" rel="noopener">Blog</a><br>Email:<a href="mailto:zhaoweihaochn@foxmail.com">zhaoweihaochn@foxmail.com</a></p>
+<h1 id="赞赏"><a href="#赞赏" class="headerlink" title="赞赏"></a>赞赏</h1><p><img src="http://upload-images.jianshu.io/upload_images/5796527-43b1117577a374a8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="wechatcode.jpg"></p>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2017/07/11/Git-SSH-Key-%E7%94%9F%E6%88%90%E6%AD%A5%E9%AA%A4/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2017/08/25/Android%E5%88%9D%E5%AD%A6%E8%80%85%EF%BC%9A%E7%94%A8%E7%9F%A5%E4%B9%8EMatisse%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%88%B6%E4%BD%9C%E6%9B%B4%E6%8D%A2%E5%BA%94%E7%94%A8%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E5%8A%9F%E8%83%BD/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><div class="copyright"><p>© 2017 - 2020 <a href="https://github.com/zhaoweih" target="_blank">Satoshi Chiu</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div></body></html>

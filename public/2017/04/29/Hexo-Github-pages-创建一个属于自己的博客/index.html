@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Hexo+Github pages 创建一个属于自己的博客 · Zhao Weihao 's Blog</title><meta name="description" content="追求自由的少年"><meta name="og:title" content="Hexo+Github pages 创建一个属于自己的博客"><meta name="og:type" content="website"><meta name="og:url" content="https://zhaoweihao.com/2017/04/29/Hexo-Github-pages-创建一个属于自己的博客/"><meta name="og:image"><meta name="og:description" content="追求自由的少年"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.jpg"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><link rel="search" type="application/opensearchdescription+xml" href="https://zhaoweihao.com/atom.xml" title="Zhao Weihao 's Blog"><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Zhao Weihao 's Blog" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">Hexo+Github pages 创建一个属于自己的博客</h1><div class="post-info"><div class="post-info-profile"><a href="/about/" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"><a href="/categories/%E5%8D%9A%E5%AE%A2" target="_self"><span>博客</span></a></div><div class="post-date">Apr 29, 2017</div></div></div><div class="post-share"><div class="fb-like" data-href="https://zhaoweihao.com/2017/04/29/Hexo-Github-pages-创建一个属于自己的博客/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="https://zhaoweihao.com/2017/04/29/Hexo-Github-pages-创建一个属于自己的博客/" data-layout="button" data-size="small" data-mobile-iframe="true"></div></div><div class="post-content"><h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><h2 id="什么是Hexo？"><a href="#什么是Hexo？" class="headerlink" title="什么是Hexo？"></a>什么是Hexo？</h2><blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <code>Markdown</code>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo官方文档中文版</a></p>
+</blockquote>
+<h2 id="适合人群"><a href="#适合人群" class="headerlink" title="适合人群"></a>适合人群</h2><ul>
+<li>喜欢写博客</li>
+<li>有MarkDown语法基础</li>
+<li>会使用版本控制Git</li>
+<li>了解使用Github</li>
+</ul>
+<h2 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h2><p>我的博客也是用Hexo+Github搭建的，主题用的是Next<br><br><a href="https://zhaoweihaochina.github.io/" target="_blank" rel="noopener">前往我的博客</a></p>
+<h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>下载<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a>并执行安装就好了</p>
+<blockquote>
+<p>由于众所周知的原因，国内下载很慢，Hexo官方文档很体贴的给出了<a href="https://github.com/waylau/git-for-win" target="_blank" rel="noopener">这个页面</a>，里面有收录百度云下载地址。<strong>我的做法是将下载地址复制到迅雷</strong></p>
+</blockquote>
+<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>在windows下安装<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>十分简单，只需要下载并安装就好了</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>利用npm命令即可安装</p>
+<pre><code>npm install -g hexo-cli</code></pre><p><code>注意</code><br>建议挂上代理<br><code>问题</code></p>
+<ul>
+<li>一些旧的文章使用<br>  npm install -g hexo<br>会出现错误，最新指令请参考<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo官方文档</a></li>
+<li>npm ERR! registry error parsing json 错误<br>可能需要设置npm代理,执行命令<br>  npm config set registry <a href="http://registry.cnpmjs.org" target="_blank" rel="noopener">http://registry.cnpmjs.org</a></li>
+<li>hexo:command not found<br>删除刚刚安装的npm目录，重新执行命令npm install -g hexo-cli安装hexo</li>
+</ul>
+<h2 id="创建hexo文件夹"><a href="#创建hexo文件夹" class="headerlink" title="创建hexo文件夹"></a>创建hexo文件夹</h2><p>安装完成后，在自己喜欢的目录下（例如：E:\Myblog\Hexo）执行如下命令(在E:\Myblog\Hexo目录空白处右键选择Git Bash),Hexo就会自动生成所需要的文件</p>
+<pre><code>hexo init</code></pre><h2 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h2><pre><code>npm install</code></pre><p><code>此步建议挂代理</code></p>
+<h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><p>现在已经在本地搭建了Hexo博客了，执行如下命令(在E:\Myblog\Hexo)，然后到浏览器输入localhost:4000即可查看</p>
+<pre><code>hexo generate
+hexo server</code></pre><p>到现在为止，本地hexo博客已经搭建完成，接下来就是部署到Github<br><code>问题</code></p>
+<ul>
+<li>执行hexo server提示找不到该指令<br>解决办法：<br>在Hexo 3.0 后server被单独出来了，需要安装server，安装的命令如下：</li>
+</ul>
+<pre><code>npm install hexo -server --save</code></pre><h2 id="github创建博客"><a href="#github创建博客" class="headerlink" title="github创建博客"></a>github创建博客</h2><ul>
+<li>注册账号<br>地址:<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><br>输入账号、邮箱和密码点击Sign up for Github</li>
+</ul>
+<p><img src="http://op4e089f0.bkt.clouddn.com/image/blogimage/20170429github_page.jpg" alt="github.jpg"></p>
+<ul>
+<li>创建github pages仓库<br>这个仓库的名字需要和你的账号对应，格式: yourname.github.io<br>输入基本信息，然后点击创建仓库.<br><code>帮助</code><br>例如我的github名字是zhaoweihaoChina,那么我的仓库名字就是zhaoweihaoChina.github.io</li>
+</ul>
+<p><img src="http://op4e089f0.bkt.clouddn.com/image/blogimage/20170429github_page_2.jpg" alt="create repository.jpg"></p>
+<h2 id="生成SSH密钥"><a href="#生成SSH密钥" class="headerlink" title="生成SSH密钥"></a>生成SSH密钥</h2><p>ssh-keygen -t rsa -C “你的邮箱地址”，按3个回车，密码为空。</p>
+<p>在C:\Users\Administrator.ssh下，得到两个文件id_rsa和id_rsa.pub。</p>
+<h2 id="在GitHub上添加SSH密钥"><a href="#在GitHub上添加SSH密钥" class="headerlink" title="在GitHub上添加SSH密钥"></a>在GitHub上添加SSH密钥</h2><p>打开id_rsa.pub，复制全文。打开 <a href="https://github.com/settings/ssh" target="_blank" rel="noopener">https://github.com/settings/ssh</a> ，Add SSH key，粘贴进去。</p>
+<h1 id="Hexo使用"><a href="#Hexo使用" class="headerlink" title="Hexo使用"></a>Hexo使用</h1><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><pre><code>.
+├── _config.yml#网站配置信息
+├── package.json#应用程序信息
+├── scaffolds#模板
+├── source
+|   ├── _drafts#草稿
+|   └── _posts#文章
+└── themes#主题</code></pre><p>更详细说明：<a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="noopener">Hexo官方文档-建站篇</a></p>
+<h2 id="全局配置-config-yml"><a href="#全局配置-config-yml" class="headerlink" title="全局配置 _config.yml"></a>全局配置 _config.yml</h2><pre><code># Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+# Site #站点信息
+title:  #标题
+subtitle:  #副标题
+description:  #站点描述，给搜索引擎看的
+author:  #作者
+email:  #电子邮箱
+language: zh-CN #语言
+timezone: Asia/Shanghai#时区
+# URL #链接格式
+url:  #网址
+root: / #根目录
+permalink: :year/:month/:day/:title/ #文章的链接格式
+permalink_defaults:
+# Directory #目录
+tag_dir: tags #标签目录
+archive_dir: archives #存档目录
+category_dir: categories #分类目录
+code_dir: downloads/code
+source_dir: source #源文件目录
+public_dir: public #生成的网页文件目录
+# Writing #写作
+new_post_name: :title.md #新文章标题
+default_layout: post #默认的模板，包括     post、page、photo、draft（文章、页面、照片、草稿）
+titlecase: false #标题转换成大写
+external_link: true #在新选项卡中打开连接
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+highlight: #语法高亮
+  enable: true #是否启用
+  line_number: true #显示行号
+  tab_replace:
+# Category &amp; Tag #分类和标签
+default_category: uncategorized #默认分类
+category_map:
+tag_map:
+# Archives
+2: 开启分页
+1: 禁用分页
+0: 全部禁用
+archive: 2
+category: 2
+tag: 2
+# Server #本地服务器
+port: 4000 #端口号
+server_ip: localhost #IP 地址
+logger: false
+logger_format: dev
+# Date / Time format #日期时间格式
+date_format: YYYY-MM-DD     #参考http://momentjs.com/docs/#/displaying/format/
+time_format: H:mm:ss
+# Pagination #分页
+per_page: 10 #每页文章数，设置成 0 禁用分页
+pagination_dir: page
+# Disqus #Disqus评论，替换为多说
+disqus_shortname:
+# Extensions #拓展插件
+theme: landscape-plus #主题
+exclude_generator:
+plugins: #插件，例如生成 RSS 和站点地图的
+- hexo-generator-feed
+- hexo-generator-sitemap
+# Deployment #部署
+deploy:
+  type: git
+  repo: 刚刚github创库地址.git
+  branch: master</code></pre><p>更详细说明:<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">Hexo官方文档-配置篇</a></p>
+<p><code>注意</code></p>
+<ul>
+<li>这里的格式很重要！很重要！很重要！（重要的事情说三遍）</li>
+<li>每个”:”冒号后面都有一个空格</li>
+<li>repo: 刚刚github创库地址.git</li>
+</ul>
+<h2 id="Hexo命令的使用"><a href="#Hexo命令的使用" class="headerlink" title="Hexo命令的使用"></a>Hexo命令的使用</h2><p>常用命令:</p>
+<pre><code>hexo help #查看帮助
+hexo init #初始化一个目录
+hexo new &quot;postName&quot; #新建文章
+hexo new page &quot;pageName&quot; #新建页面
+hexo generate #生成网页，可以在 public 目录查看整个网站的文件
+hexo server #本地预览，&apos;Ctrl+C&apos;关闭
+hexo deploy #部署.deploy目录
+hexo clean #清除缓存，**强烈建议每次执行命令前先清理缓存，每次部署前先删除 .deploy 文件夹**</code></pre><p>简写：</p>
+<pre><code>hexo n == hexo new
+hexo g == hexo generate
+hexo s == hexo server
+hexo d == hexo deploy</code></pre><p>更详细的命令:<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">Hexo官方文档-命令篇</a></p>
+<h2 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h2><p>新建文章</p>
+<pre><code>hexo new &quot;标题&quot;</code></pre><p>在 _posts 目录下会生成文件标题.md</p>
+<pre><code>title: 标题
+date: 2017-04-29 07:56:29 #发表日期，一般不改动
+categories: hexo #文章文类
+tags: [hexo,github] #文章标签，多于一项时用这种格式
+---
+正文，使用Markdown语法书写</code></pre><p>Markdown编辑器推荐：<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">Cmd Markdown</a><br>Markdown基础语法：<a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" target="_blank" rel="noopener">Cmd Markdown 简明语法手册</a></p>
+<p>编辑完后保存,hexo server预览</p>
+<h2 id="Hexo部署"><a href="#Hexo部署" class="headerlink" title="Hexo部署"></a>Hexo部署</h2><p>执行下列指令即可完成部署。</p>
+<pre><code>hexo generate
+hexo deploy</code></pre><p>以下提示说明部署成功</p>
+<pre><code>[info] Deploy done: git</code></pre><p>打开<a href="https://yourname.github.io就可以看到你的博客了" target="_blank" rel="noopener">https://yourname.github.io就可以看到你的博客了</a></p>
+<h2 id="Hexo主题"><a href="#Hexo主题" class="headerlink" title="Hexo主题"></a>Hexo主题</h2><p>这里以配置next主题为例</p>
+<h6 id="1-打开Hexo官方主题"><a href="#1-打开Hexo官方主题" class="headerlink" title="1. 打开Hexo官方主题"></a>1. 打开<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题</a></h6><h6 id="2-找到next主题"><a href="#2-找到next主题" class="headerlink" title="2. 找到next主题"></a>2. 找到next主题</h6><p>  <img src="http://op4e089f0.bkt.clouddn.com/image/blogimage/20170429github_page_3.jpg" alt="next.jpg"></p>
+<h6 id="3-点击NexT蓝色字体进入进入next的github界面，在介绍里可以找到next使用文档"><a href="#3-点击NexT蓝色字体进入进入next的github界面，在介绍里可以找到next使用文档" class="headerlink" title="3. 点击NexT蓝色字体进入进入next的github界面，在介绍里可以找到next使用文档"></a>3. 点击NexT蓝色字体进入进入next的github界面，在介绍里可以找到<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">next使用文档</a></h6><h6 id="4-下载主题"><a href="#4-下载主题" class="headerlink" title="4. 下载主题"></a>4. 下载主题</h6><p>  执行如下命令(在E:\Myblog\Hexo)</p>
+<pre><code>git clone https://github.com/iissnan/hexo-theme-next themes/next </code></pre><h6 id="5-启用主题"><a href="#5-启用主题" class="headerlink" title="5. 启用主题"></a>5. 启用主题</h6><p>   打开_config.yml，找到<code>theme</code>字段，，并将其值更改为<code>next</code>。</p>
+<pre><code>theme: next</code></pre><p>  现在next主题已经配置完成了，执行如下命令(在E:\Myblog\Hexo)</p>
+<pre><code>hexo clean
+hexo server</code></pre><p>  然后到浏览器输入localhost:4000即可查看</p>
+<p>   更加详细的next主题配置请到<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">next开始使用</a>和<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">next主题配置</a>查看</p>
+<h6 id="6-部署到github"><a href="#6-部署到github" class="headerlink" title="6. 部署到github"></a>6. 部署到github</h6><p>设置满意后，执行</p>
+<pre><code>hero generate
+hero deploy</code></pre><p>  然后到yourname.github.io即可查看效果（会有一点延迟）</p>
+<h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>  昨天折腾了一晚上得出来的经验，汇总给大家</p>
+<p>  如果大家觉得本文对你有帮助，不妨微信扫描以下二维码，请我喝杯咖啡</p>
+<p>  <img src="http://op4e089f0.bkt.clouddn.com/wechatcode.jpg" alt=""></p>
+</div></article></div></main><footer><div class="paginator"><a class="next" href="/2017/05/02/Android-2%E5%88%86%E9%92%9F%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9C%8B%E7%9A%84%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><div class="copyright"><p>© 2017 - 2020 <a href="https://github.com/zhaoweih" target="_blank">Satoshi Chiu</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div></body></html>
